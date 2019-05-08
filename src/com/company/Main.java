@@ -16,7 +16,8 @@ public class Main {
         // adding the conversation starter into a list of conversation
         chatHistory.add(starter);
         String conversation = "";
-        int cal,post,neg;
+        int cal=0;
+        int post=0,neg=0;
         // do starts the conversation runinf for the first time
         do {
         // created a Raven class
