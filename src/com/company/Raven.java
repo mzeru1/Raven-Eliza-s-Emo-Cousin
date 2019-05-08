@@ -11,7 +11,7 @@ public class Raven {
     private String[] positive = {"good", "glad", "happy", "relaxed", "accomplished", "alert", "creative"};
     private String[] negative = {"bad", "sad", "tired", "angry", "anxious", "hungry", "moody", "afraid"};
 
-    public int moodAlexa(String str) {
+    public int modepositive(String str) {
         String[] typedWords = str.split(" ");
         for (int i = 0; i < positive.length; i++) {
             for (int j = 0; j < typedWords.length; j++) {
@@ -23,8 +23,8 @@ public class Raven {
         return postCount;
     }
 
-        public int modeNegative(String str){
-            String[] typedWords = str.split(" ");
+    public int modeNegative(String str) {
+        String[] typedWords = str.split(" ");
         for (int i = 0; i < negative.length; i++) {
             for (int j = 0; j < typedWords.length; j++) {
                 if (negative[i].equalsIgnoreCase(typedWords[j])) {
@@ -35,9 +35,15 @@ public class Raven {
         return negCount;
     }
 
-    public int getPostCount(int x ) {
+    public int getPostCount(int x) {
         return x;
     }
 
+    public int posvalue (int p, int n) {
+        return (postCount - negCount);
+    }
+    public int negValue (int n, int p){
+        return  (negCount - postCount);
+    }
 
 }
